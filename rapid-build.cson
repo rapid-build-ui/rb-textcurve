@@ -12,6 +12,10 @@ common:
 			client:
 				files: true
 		from:
+			dist:
+				client: [
+					'images/**'
+				]
 			minFile:
 				scripts: [
 					'scripts/**/*.js'

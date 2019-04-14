@@ -1,6 +1,6 @@
-/***********
+/***************
  * RB-TEXTCURVE
- ***********/
+ ***************/
 import { RbBase, props, html } from '../../rb-base/scripts/rb-base.js';
 import template                from '../views/rb-textcurve.html';
 
