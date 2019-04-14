@@ -1,0 +1,10 @@
+/*******
+ * HOST
+ *******/
+:host {
+	contain: content;
+	display: block;
+}
+:host([hidden]) {
+	display: none;
+}

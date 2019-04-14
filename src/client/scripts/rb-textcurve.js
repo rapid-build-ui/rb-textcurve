@@ -15,7 +15,7 @@ export class RbTextcurve extends RbBase() {
 
 	/* Template
 	 ***********/
-	render({ props, state }) { // :string
+	render({ props }) { // :string
 		return html template;
 	}
 }
