@@ -6,7 +6,6 @@ $borderColor: #e6e6e6;
 .textcurve {
 	display: flex;
 	align-items: flex-start;
-	margin: 0 0 18px;
 
 	.caption {
 		order: 1;
@@ -39,8 +38,11 @@ $borderColor: #e6e6e6;
 		border-bottom: 1px solid $borderColor;
 		border-top-right-radius: 3px;
 		color: #778799;
-
 		// color: #004085;
 		// background-color: #cce5ff; // #d4edda
+	}
+
+	::slotted(*) {
+		margin-bottom: 0 !important;
 	}
 }
