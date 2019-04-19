@@ -2,8 +2,9 @@
  * HOST
  *******/
 :host {
-	// paint prevents popover inside content from being over everything
-	contain: layout style;
+	// layout and paint prevents
+	// popover from being over everything
+	contain: style;
 	display: block;
 	margin-bottom: 18px;
 }
