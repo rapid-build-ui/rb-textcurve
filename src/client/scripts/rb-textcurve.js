@@ -9,7 +9,9 @@ export class RbTextcurve extends RbBase() {
 	 *************/
 	static get props() {
 		return {
-			kind: props.string
+			kind: Object.assign({}, props.string, {
+				default: 'default'
+			})
 		};
 	}
 

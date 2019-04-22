@@ -1,0 +1,42 @@
+/********
+ * KINDS (todo: make css variables)
+ ********/
+.textcurve { // common
+	.caption {
+		border-top-width: 1px;
+		border-top-style: solid;
+	}
+	.subtext {
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		border-top-right-radius: 4px;
+	}
+}
+
+@mixin setKindColors($kind, $bg, $border, $color) {
+	.#{$kind} {
+		.caption {
+			border-top-color: $border;
+		}
+		.subtext {
+			color: $color;
+			background-color: $bg;
+			border-bottom-color: $border;
+		}
+		&::before {
+			$bg:     strReplace($bg, '#', '');
+			$border: strReplace($border, '#', '');
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='22' viewBox='0 0 30 22'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23#{$bg}' d='M0,0 L30,0 L30,22 C26.7967936,21.7119141 24.4177246,20.7177327 22.862793,19.0174561 C20.2821045,16.3344727 12.7515333,5.77215653 9.43481445,3.0657959 C7.22366853,1.26155548 4.07873038,0.239623511 0,0 Z'/%3E%3Cpath stroke='%23#{$border}' stroke-linejoin='round' d='M0,0.500771555 C3.44988911,0.472862164 6.25700432,1.20212544 8.42134565,2.68856139 C13.4483633,6.17374669 19.419858,16.4422836 23.1224081,19.2869875 C24.7286672,20.8431317 27.0211979,21.5785898 30,21.4933618'/%3E%3C/g%3E%3C/svg%3E%0A");
+		}
+	}
+}
+
+// $kinds: default, danger, info, neutral, primary, success, warning;
+@include setKindColors(default, '', #e3e3e3, #778799); // todo: move default colors to palette
+@include setKindColors(danger,  mapGet($palette, xRedLight),       mapGet($palette, redLight),       mapGet($palette, red));
+@include setKindColors(info,    mapGet($palette, xTurquoiseLight), mapGet($palette, turquoiseLight), mapGet($palette, turquoise));
+@include setKindColors(neutral, mapGet($palette, xGreyLight),      mapGet($palette, greyLight),      mapGet($palette, grey));
+@include setKindColors(primary, mapGet($palette, xBlueLight),      mapGet($palette, blueLight),      mapGet($palette, blue));
+@include setKindColors(success, mapGet($palette, xGreenLight),     mapGet($palette, greenLight),     mapGet($palette, green));
+@include setKindColors(warning, mapGet($palette, xYellowLight),    mapGet($palette, yellowLight),    mapGet($palette, yellow));
+
