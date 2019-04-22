@@ -1,0 +1,18 @@
+/*************
+ * RESPONSIVE
+ *************/
+@media (max-width: 464px) {
+	.caption { padding-right: 20px; }
+}
+@media (min-width: 464px) {
+	.caption { padding-right: 30px; }
+}
+@media (min-width: 576px) {
+	.caption { padding-right: 40px; }
+}
+@media (min-width: 768px) {
+	.caption { padding-right: 50px; }
+}
+@media (min-width: 1024px) {
+	.caption { padding-right: 60px; }
+}
