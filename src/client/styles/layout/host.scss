@@ -1,0 +1,13 @@
+/*******
+ * HOST
+ *******/
+:host {
+	// layout and paint prevents
+	// popover from being over everything
+	contain: style;
+	display: block;
+	margin-bottom: 18px;
+}
+:host([hidden]) {
+	display: none;
+}
