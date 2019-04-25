@@ -21,6 +21,7 @@
 		order: 3;
 		flex-grow: 1;
 		min-height: 22px;
+		margin-left: -1px; // fixes tiny whitespace in safari
 		padding: 0 5px 0 0;
 		box-sizing: border-box;
 		text-align: right;
