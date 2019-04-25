@@ -3,11 +3,6 @@
  * Applies to both light and dark themes.
  *****************************************/
 $commonCssVars: (
-	// Borders (common for all kinds)
-	border-radius: 4px,
-	border-style:  solid,
-	border-width:  1px,
-
 	// Background Colors
 	default-bg: mapGet($palette, trans),
 	danger-bg:  mapGet($palette, xRedLight),

@@ -27,4 +27,21 @@
 		font-size: 15px;
 		line-height: 21px; // no more to stay even with curve
 	}
+
+	/* Common Borders
+	 *****************/
+	$border: (
+		radius: 4px,
+		width:  1px,
+		style:  solid
+	);
+	.caption {
+		border-top-width: mapGet($border, width);
+		border-top-style: mapGet($border, style);
+	}
+	.subtext {
+		border-bottom-width: mapGet($border, width);
+		border-bottom-style: mapGet($border, style);
+		border-top-right-radius: mapGet($border, radius);
+	}
 }
