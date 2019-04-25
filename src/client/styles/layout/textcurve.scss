@@ -12,13 +12,9 @@
 		box-sizing: border-box;
 	}
 
-	&::before {
-		content: '';
+	svg { // the curve
 		order: 2;
-		width: 30px;
-		min-height: 22px;
 		box-sizing: border-box;
-		background-repeat: no-repeat;
 	}
 
 	.subtext {

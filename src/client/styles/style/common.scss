@@ -1,0 +1,47 @@
+/********************************************
+ * COMMON STYLES (for light and dark themes)
+ ********************************************/
+@mixin setCommonStyles() {
+	.textcurve { // common
+		.caption {
+			border-top-width: mapGet($vars, common, border-width);
+			border-top-style: mapGet($vars, common, border-style);
+		}
+		.subtext {
+			border-bottom-width: mapGet($vars, common, border-width);
+			border-bottom-style: mapGet($vars, common, border-style);
+			border-top-right-radius: mapGet($vars, common, border-radius);
+		}
+	}
+
+	// Kinds
+	$kinds: default, danger, info, neutral, primary, success, warning;
+	@each $kind in $kinds {
+		.#{$kind} {
+			$bg: mapGet($vars, common, #{$kind}-bg);
+			$border: mapGet($vars, common, #{$kind}-border-color);
+			$subtextColor: mapGet($vars, common, #{$kind}-subtext-color);
+			.caption {
+				border-top-color: $border;
+			}
+			.subtext {
+				color: $subtextColor;
+				background-color: $bg;
+				border-bottom-color: $border;
+			}
+			svg path {
+				&[fill] {
+					fill: $bg;
+				}
+				&[stroke] {
+					stroke: $border;
+					// TODO: set stroke width and style (dasharray)
+					// stroke-width: mapGet($vars, common, border-width);
+					// stroke-dasharray: 2.5px;
+				}
+			}
+		}
+	}
+}
+
+@include setCommonStyles();

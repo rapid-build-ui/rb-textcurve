@@ -1,0 +1,7 @@
+/********************
+ * CSS VARIABLES MAP
+ ********************/
+$component: 'rb-textcurve';
+$vars: (
+	common: getCssVarsMap($component, $commonCssVars)
+);
