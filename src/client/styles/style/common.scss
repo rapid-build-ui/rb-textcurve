@@ -1,0 +1,32 @@
+/********************************************
+ * COMMON STYLES (for light and dark themes)
+ ********************************************/
+@mixin setCommonStyles() {
+	// Kinds
+	$kinds: default, danger, info, neutral, primary, success, warning;
+	@each $kind in $kinds {
+		.#{$kind} {
+			$bg: mapGet($vars, common, #{$kind}-bg);
+			$border: mapGet($vars, common, #{$kind}-border-color);
+			$subtextColor: mapGet($vars, common, #{$kind}-subtext-color);
+			.caption {
+				border-top-color: $border;
+			}
+			.subtext {
+				color: $subtextColor;
+				background-color: $bg;
+				border-bottom-color: $border;
+			}
+			svg path {
+				&[fill] {
+					fill: $bg;
+				}
+				&[stroke] {
+					stroke: $border;
+				}
+			}
+		}
+	}
+}
+
+@include setCommonStyles();

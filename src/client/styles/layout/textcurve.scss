@@ -1,8 +1,6 @@
 /************
  * TEXTCURVE
  ************/
-$borderColor: #e3e3e3;
-
 .textcurve {
 	display: flex;
 	align-items: flex-start;
@@ -10,35 +8,43 @@ $borderColor: #e3e3e3;
 	.caption {
 		order: 1;
 		margin: 0;
-		padding: 15px 60px 0 0;
+		padding-top: 15px; // see responsive for right padding
 		box-sizing: border-box;
-		border-top: 1px solid $borderColor;
 	}
 
-	&::before {
-		content: '';
+	svg { // the curve
 		order: 2;
-		width: 30px;
-		min-height: 22px;
+		flex-shrink: 0;
 		box-sizing: border-box;
-		background-repeat: no-repeat;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='22' viewBox='0 0 30 22'%3E%3Cpath fill='none' stroke='%23E3E3E3' stroke-linejoin='round' d='M0,0.500771555 C3.44988911,0.472862164 6.25700432,1.20212544 8.42134565,2.68856139 C13.4483633,6.17374669 19.419858,16.4422836 23.1224081,19.2869875 C24.7286672,20.8431317 27.0211979,21.5785898 30,21.4933618'/%3E%3C/svg%3E%0A");
-		// background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='22' viewBox='0 0 30 22'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath fill='%23CCE5FF' d='M0,0 L30,0 L30,22 C26.7967936,21.7119141 24.4177246,20.7177327 22.862793,19.0174561 C20.2821045,16.3344727 12.7515333,5.77215653 9.43481445,3.0657959 C7.22366853,1.26155548 4.07873038,0.239623511 0,0 Z'/%3E%3Cpath stroke='%23E3E3E3' stroke-linejoin='round' d='M0,0.500771555 C3.44988911,0.472862164 6.25700432,1.20212544 8.42134565,2.68856139 C13.4483633,6.17374669 19.419858,16.4422836 23.1224081,19.2869875 C24.7286672,20.8431317 27.0211979,21.5785898 30,21.4933618'/%3E%3C/g%3E%3C/svg%3E%0A");
 	}
 
 	.subtext {
 		order: 3;
 		flex-grow: 1;
 		min-height: 22px;
+		max-height: 22px;
+		margin-left: -1px; // fixes tiny whitespace in safari
 		padding: 0 5px 0 0;
 		box-sizing: border-box;
 		text-align: right;
 		font-size: 15px;
 		line-height: 21px; // no more to stay even with curve
-		border-bottom: 1px solid $borderColor;
-		border-top-right-radius: 3px;
-		color: #778799;
-		// color: #004085;
-		// background-color: #cce5ff; // #d4edda
+	}
+
+	/* Common Borders
+	 *****************/
+	$border: (
+		radius: 4px,
+		width:  1px,
+		style:  solid
+	);
+	.caption {
+		border-top-width: mapGet($border, width);
+		border-top-style: mapGet($border, style);
+	}
+	.subtext {
+		border-bottom-width: mapGet($border, width);
+		border-bottom-style: mapGet($border, style);
+		border-top-right-radius: mapGet($border, radius);
 	}
 }

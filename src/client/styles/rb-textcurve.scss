@@ -8,3 +8,14 @@
 @import 'layout/host.scss';
 @import 'layout/slots.scss';
 @import 'layout/textcurve.scss';
+@import 'layout/responsive.scss';
+
+/* CSS Style Variables
+ **********************/
+@import 'sass/palette.scss';
+@import 'variables/common.scss';
+@import 'sass/css-vars.scss';
+
+/* Styles
+ *********/
+@import 'style/common.scss';
