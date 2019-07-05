@@ -5,6 +5,13 @@ import { RbBase, props, html } from '../../rb-base/scripts/rb-base.js';
 import template                from '../views/rb-textcurve.html';
 
 export class RbTextcurve extends RbBase() {
+	/* Lifecycle
+	 ************/
+	constructor() {
+		super();
+		this.version = '0.0.1';
+	}
+
 	/* Properties
 	 *************/
 	static get props() {
