@@ -1,6 +1,6 @@
 {
   "name": "@rapid-build-ui/rb-textcurve",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "scripts/rb-textcurve.js",
   "description": "Rapid Build UI Web Component: rb-textcurve",
   "license": "MIT",
