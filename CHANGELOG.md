@@ -1,3 +1,12 @@
+## [0.0.4](https://github.com/rapid-build-ui/rb-textcurve/compare/v0.0.3...v0.0.4) (2019-07-16)
+
+
+### Dependencies
+
+* **bump:** dep base v0.0.12 ([6360dac](https://github.com/rapid-build-ui/rb-textcurve/commit/6360dac))
+
+
+
 ## [0.0.3](https://github.com/rapid-build-ui/rb-textcurve/compare/v0.0.2...v0.0.3) (2019-07-12)
 
 

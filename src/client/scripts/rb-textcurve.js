@@ -9,7 +9,7 @@ export class RbTextcurve extends RbBase() {
 	 ************/
 	constructor() {
 		super();
-		this.version = '0.0.3';
+		this.version = '0.0.4';
 	}
 
 	/* Properties
