@@ -5,3 +5,18 @@
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
+
+/* Rb Components
+ ****************/
+[name='subtext'] {
+	&::slotted(rb-input),
+	&::slotted(rb-dropdown) {
+		position: relative;
+		top: -3px;
+		left: 5px; // same as .subtext right padding
+	}
+	&::slotted(rb-input[label]),
+	&::slotted(rb-dropdown[label]) {
+		top: -27px; // not bulletproof (display off on multiline label)
+	}
+}

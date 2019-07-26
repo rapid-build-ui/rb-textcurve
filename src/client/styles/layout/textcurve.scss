@@ -21,6 +21,8 @@
 	.subtext {
 		order: 3;
 		flex-grow: 1;
+		display: flex;
+		justify-content: flex-end;
 		min-height: 22px;
 		max-height: 22px;
 		margin-left: -1px; // fixes tiny whitespace in safari
